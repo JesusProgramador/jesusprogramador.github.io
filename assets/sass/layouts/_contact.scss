@@ -1,0 +1,105 @@
+.contact {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.contact__title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.contact__text {
+    width: 70%;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.contact__logos {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    place-items: center;
+}
+
+.logo__item {
+    text-align: center;
+    width: 7rem;
+    height: 7rem;
+    padding: 1.5rem;
+    filter: opacity(0.8);
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-shadow: -10px -10px 15px #ffffff, 10px 10px 25px rgba(174, 174, 192, 0.7);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+.logo__item:hover {
+    filter: opacity(1);
+    border: 3px solid $winter;
+    box-shadow: -10px -10px 15px #ffffff, 10px 10px 15px rgba(174, 174, 192, 0.7), inset -3px -3px 10px #ffffff, inset 3px 3px 10px rgba(174, 174, 192, 0.7);
+}
+
+.logo__item:active {
+    background: #ffe9e9;
+    transform: translate(0, 0.75em);
+    border: 3px solid $winter;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.7), 10px 10px 15px rgba(174, 174, 192, 0.4), inset -3px -3px 10px rgba(255, 255, 255, 0.7), inset 3px 3px 10px rgba(174, 174, 192, 0.4);
+}
+
+.logo__item:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate(0, 0, -1em);
+}
+
+@media (max-width:768px) {
+    .contact__title {
+        font-size: 2rem;
+    }
+    .contact__text {
+        width: 90%;
+        padding: 1.5rem 0;
+        font-size: 1.25rem;
+        margin: 0 auto;
+        text-align: justify;
+    }
+    .contact__logos {
+        width: 90%;
+        gap: 20px 10px;
+    }
+    .logo__item {
+        width: 6rem;
+        height: 6rem;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width:425px) {
+    .contact__title {
+        font-size: 1.5rem;
+    }
+    .contact__text {
+        font-size: 1rem;
+        margin: 0 auto;
+        text-align: justify;
+    }
+    .contact__logos {
+        width: 90%;
+        padding: 1.25rem 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        place-items: center;
+    }
+    .logo__item {
+        width: 4rem;
+        height: 4rem;
+        padding: 1rem;
+    }
+}

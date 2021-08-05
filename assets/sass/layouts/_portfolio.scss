@@ -1,0 +1,153 @@
+.portfolio__title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.portfolio__layout {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 20px 10px;
+    place-items: center;
+    padding: 1rem;
+}
+
+@keyframes appear {
+    from {
+        position: relative;
+        top: -270px
+    }
+    to {
+        position: relative;
+        top: 0;
+    }
+}
+
+.portfolio__item {
+    position: relative;
+    width: 380px;
+    height: 260px;
+    transition: all 300ms;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: -10px -10px 15px #ffffff, 10px 10px 25px rgba(174, 174, 192, 0.7);
+}
+
+.portfolio__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 300ms;
+}
+
+.portfolio__image:hover {
+    transform: scale(1.4);
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $black-navy, $alpha: 0.5);
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(2px);
+}
+
+.image__overlay>* {
+    transform: translateY(20px);
+    transition: transform 500ms;
+}
+
+.image__overlay:hover>* {
+    transform: translateY(0);
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__title {
+    font-size: 2rem;
+    color: $navy;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+.overlay__btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.overlay__btn>* {
+    padding: 0.5rem 1rem;
+    color: $white;
+    font-size: 1rem;
+    border: 2px solid $navy;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: all 500ms;
+}
+
+.overlay__btn--hover:hover {
+    background-color: $navy;
+    color: $black-navy;
+}
+
+.btn__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width:768px) {
+    .portfolio__title {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width:425px) {
+    .portfolio__title {
+        font-size: 1.5rem;
+    }
+    .portfolio__layout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .portfolio__item {
+        width: 260px;
+        height: 220px;
+        margin: 0.5rem;
+    }
+    .image__title {
+        font-size: 1.5rem;
+    }
+    .image__description {
+        text-align: center;
+    }
+    .overlay__btn>* {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    .portfolio__item {
+        box-shadow: -5px -5px 10px #ffffff, 5px 5px 10px rgba(174, 174, 192, 0.7);
+    }
+}

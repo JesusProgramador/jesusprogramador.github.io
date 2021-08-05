@@ -1,0 +1,59 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__title {
+    font-family: $ubuntu;
+    font-size: 8rem;
+    margin: -3rem 0;
+}
+
+.hero__arrow {
+    width: 3rem;
+    fill: $white;
+    border: 6px solid $black-navy;
+    border-radius: 100px;
+    margin: 0 auto;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes bounce {
+    from {
+        margin-top: 5rem;
+    }
+    to {
+        margin-top: 6rem;
+    }
+}
+
+.hero--bounce {
+    transition: all 300ms;
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@media (min-width: 320px) and (max-width:425px) {
+    .hero__title {
+        font-family: "Ubuntu", sans-serif;
+        font-size: 8rem;
+        margin: -3rem 0;
+    }
+    .hero__arrow {
+        width: 2rem;
+        fill: #fff;
+        border: 3px solid #053742;
+        border-radius: 100px;
+        margin: 0 auto;
+        margin-top: 6rem;
+        display: flex;
+        justify-content: center;
+    }
+}
