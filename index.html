@@ -8,8 +8,7 @@
 
     <title>Jesus Fuentes / Portfolio</title>
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 
 <body>
@@ -17,7 +16,9 @@
         <div class="nav__container">
 
             <h1 class="nav__logo nav__pulse">
-                < Jesús Fuentes />
+                <a href="#home">
+                    [Jesús Fuentes]
+                </a>
             </h1>
 
             <label for="menu" class="nav__label">
@@ -35,7 +36,7 @@
     </nav>
 
 
-    <main class="main">
+    <main class="main" id="home">
         <div class="container">
             <section class="hero">
                 <div class="hero__box">
@@ -131,9 +132,12 @@
                         <img src="assets/img/foto-perfil.jfif" alt="" class="profile__image">
 
                         <div class="curriculum__btn">
-                            <button class="btn__cv">
+                            <a href="/assets/docs/JesusResume.pdf" download="CV Jesús Fuentes">
+                                <button class="btn__cv">
                                 Descargar CV
                             </button>
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -261,7 +265,7 @@
 
                 <div class="contact__logos">
                     <div class="logo__item">
-                        <a href="" target="_blank">
+                        <a href="mailto:alejandrofuentes6590@gmail.com" target="_blank">
                             <img src="assets/img/envelope-regular.svg" alt="mail logo">
                         </a>
                     </div>
